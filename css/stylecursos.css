@@ -1,122 +1,267 @@
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
 * {
     box-sizing: border-box;
 }
 
-
-body{
+body {
+    margin: 0;
+    padding: 0;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: black;
 }
 
-h1{
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-h3{
-    color: black;
-    position: relative;
-    font-size: 20px;
-    padding: 10px;
-    
-}
 .container {
     background-color: #C6A3D5;
-    height: 100%;
     width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
     border: 1px solid black;
-    
 }
-img{
-    height: 100%;
+
+/* =================================
+   CABEÇALHO E LOGO
+================================= */
+
+header {
     width: 100%;
-    
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.logo{
+
+.logo {
     width: 300px;
+    max-width: 100%;
     height: 100px;
     background-color: orange;
     border: 1px solid #C6A3D5;
-    margin-left: 500px;
 }
 
-header{
-    border: 1px solid #C6A3D5;
-    width: 100%;  
-    height: 100px;
-}
-
-nav{
-    border: 1px solid black;
+.logo img {
     width: 100%;
-    height: 50px;
+    height: 100%;
+    object-fit: contain;
 }
 
-footer{
-    border: 1px solid black;
+/* =================================
+   MENU DE NAVEGAÇÃO
+================================= */
+
+nav {
     width: 100%;
-    height: 50px;
-    text-align: center;
-    padding-top: 15px;
-    font-size: 18px;
+    min-height: 45px;
+    border: 1px solid black;
 }
 
 nav ul {
-    list-style-type: none;
-    overflow: hidden;
-    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-    float: left;
+    float: none;
 }
 
 nav li a {
     display: block;
     text-align: center;
-    padding: 9px 10px;
+    padding: 12px 15px;
     text-decoration: none;
+    color: black;
 }
 
-nav li a:visited{
+nav li a:visited {
     color: black;
 }
 
 nav li a:hover {
     background-color: lightgray;
-} 
+}
+
+/* =================================
+   CONTEÚDO PRINCIPAL
+================================= */
+
+main {
+    width: 100%;
+    padding: 25px 20px;
+    text-align: center;
+}
 
 #caixa {
-    height: 100%;
     width: 100%;
-    text-align: center;
-    margin-top: 20px;
-}
-#b1, #b2, #b3, #b4 {
-    margin-top: 50px;
+    margin: 0 auto;
 }
 
-.linha {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 15px;
-    
+#p1 {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 15px 0 30px;
 }
+
+/* =================================
+   ORGANIZAÇÃO DOS CURSOS
+================================= */
+
+.linha {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+/* Cartões */
+
 .box {
     background-color: white;
-    width: 300px;
-    height: 150px;
+    width: 100%;
+    min-width: 0;
+    min-height: 160px;
+    height: auto;
     border: 1px solid black;
     text-align: center;
     border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-.line{
-    width: 300px;
-    border: 1px solid black; 
-    position: absolute;
-    
-}  
+
+/* Títulos dos cursos */
+
+.box h1 {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 12px 10px;
+    margin: 0;
+    min-height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Linha divisória */
+
+.line {
+    width: 100%;
+    border-top: 1px solid black;
+    position: static;
+}
+
+/* Descrição dos cursos */
+
+.box h3 {
+    color: black;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 12px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* =================================
+   RODAPÉ
+================================= */
+
+footer {
+    width: 100%;
+    min-height: 50px;
+    height: auto;
+    border-top: 1px solid black;
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =================================
+   TABLETS
+================================= */
+
+@media (max-width: 950px) {
+
+    .linha {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+}
+
+/* =================================
+   CELULARES
+================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 90px;
+    }
+
+    .logo {
+        width: 260px;
+        height: 90px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav li a {
+        padding: 11px 9px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 18px 12px;
+    }
+
+    #p1 {
+        font-size: 23px;
+        margin: 10px 0 22px;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 14px;
+    }
+
+    .box {
+        min-height: 130px;
+    }
+
+    .box h1 {
+        font-size: 17px;
+        min-height: 55px;
+    }
+
+    .box h3 {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+
+    footer {
+        font-size: 11px;
+        padding: 12px 8px;
+    }
+
+}
