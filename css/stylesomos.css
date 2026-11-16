@@ -1,158 +1,368 @@
+
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-body{
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: black;
 }
+
 .container {
-  background-color: #C6A3D5;
-  height: 100%;
-  width: 100%;
-}
-header{
-  width: 100%;
-  height: 100px;
-}
-.logo{
-    width: 300px;
-    height: 100px;
-    background-color: purple;
-    border: 1px solid #C6A3D5;
-    margin-left: 500px;
-}
-img{
-    height: 100%;
+    background-color: #C6A3D5;
     width: 100%;
-
-}
-nav{
-  border: 1px solid black;
-  width: 100%;
-  height: 50px;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
 }
 
-main{
-  border: 1px solid black;
-  width: 100%;
-  height: 1740px; 
-  text-align: center;
-}
-h1{
-  font-size: 30px;
-  display: inline-block;
-}
-h2{
-  font-size: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-h3{
-  color: black;   
-  font-size: 20px;
-  padding: 10px;
+/* =====================================
+   CABEÇALHO E LOGO
+===================================== */
+
+header {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#b5, #b6, #b7 {
-  margin-top: 40px;
-  margin-left: 20px;
+.logo {
+    width: 300px;
+    max-width: 100%;
+    height: 100px;
+    background-color: transparent;
+    border: none;
 }
 
-.linha {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;  
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
-.box {
-  background-color: white;
-  width: 400px;
-  height: 130px;
-  border: 1px solid black;
-  text-align: center;
-  border-radius: 10px;
-}
-.line{
-  width: 400px;
-  border: 1px solid black; 
-  position: absolute;
-}  
 
-footer{
-  border: 1px solid black;
-  width: 100%;
-  height: 50px;
-  text-align: center;
-  padding-top: 15px;
-  font-size: 18px;
+/* =====================================
+   MENU DE NAVEGAÇÃO
+===================================== */
+
+nav {
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid black;
 }
+
 nav ul {
-  list-style-type: none;
-  overflow: hidden;
-  color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-  float: left;
-}
-nav li a {
-  display: block;
-  text-align: center;
-  padding: 9px 10px;
-  text-decoration: none;
-}
-nav li a:visited{
-  color: black;
-}
-nav li a:hover {
-  background-color: lightgray;
-} 
-#caixa {
-  height: 100%;
-  width: 100%;
-}
-.separa{
-  justify-content: space-between;
-  display: flex;
-}
-.texto{
-  width: 600px;
-  height: 300px; 
-  margin: 30px;
-} 
-#t1{
-  margin-top: 30px;
-}
-#t2{
-  margin-top: 100px;
-}
-#t3{
-  margin-top: 30px;
-}
-#t4{ 
-  font-size: 40px;
-  margin-top: 40px;
-}
-#t5{
-  margin: 30px;
- font-size: 25px;
-}
-.b1{
-  background-color: purple;
-  width: 700px;
-  height: 450px;
-  border: 1px solid black;
-  margin-top: 30px;
-  margin-left: 30px;
+    float: none;
 }
 
-.b2{
-  background-color: purple;
-  width: 700px;
-  height: 450px;
-  border: 1px solid black;
-  margin-top: 40px;
-  margin-right: 20px;
+nav li a {
+    display: block;
+    text-align: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+nav li a:visited {
+    color: black;
+}
+
+nav li a:hover {
+    background-color: lightgray;
+}
+
+/* =====================================
+   CONTEÚDO PRINCIPAL
+===================================== */
+
+main {
+    width: 100%;
+    padding: 25px 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#caixa {
+    width: 100%;
+}
+
+/* =====================================
+   HISTÓRIA DO PROJETO
+===================================== */
+
+.separa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.texto {
+    flex: 1;
+    min-width: 0;
+    height: auto;
+    margin: 15px;
+}
+
+.texto h1 {
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =====================================
+   IMAGENS DA HISTÓRIA
+===================================== */
+
+.b1,
+.b2 {
+    flex: 1;
+    min-width: 0;
+    height: 380px;
+    background-color: purple;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.b1 img,
+.b2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =====================================
+   TÍTULOS E MISSÃO
+===================================== */
+
+#t3 {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 35px 0 20px;
+}
+
+#t4 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 35px 0 20px;
+}
+
+#t5 {
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.7;
+    margin: 20px 15px 35px;
+}
+
+/* =====================================
+   CARTÕES DOS PROPÓSITOS
+===================================== */
+
+.linha {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+    margin: 20px auto 35px;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    min-width: 0;
+    min-height: 180px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 15px 10px;
+    margin: 0;
+}
+
+.line {
+    width: 100%;
+    border-top: 1px solid black;
+    position: static;
+}
+
+.box h3 {
+    color: black;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.6;
+    padding: 15px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+footer {
+    width: 100%;
+    min-height: 50px;
+    height: auto;
+    border-top: 1px solid black;
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =====================================
+   TABLETS
+===================================== */
+
+@media (max-width: 900px) {
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .separa {
+        gap: 15px;
+    }
+
+    .b1,
+    .b2 {
+        height: 300px;
+    }
+
+    .texto {
+        margin: 10px;
+    }
+
+    .texto h1 {
+        font-size: 15px;
+    }
+
+    .linha {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* =====================================
+   CELULARES
+===================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 90px;
+    }
+
+    .logo {
+        width: 260px;
+        height: 90px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav li a {
+        padding: 11px 9px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 18px 12px;
+    }
+
+    .separa {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .b1,
+    .b2 {
+        width: 100%;
+        height: 230px;
+        flex: none;
+    }
+
+    .texto {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .texto h1 {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    #t3 {
+        font-size: 22px;
+        margin: 25px 0 15px;
+    }
+
+    #t4 {
+        font-size: 25px;
+        margin: 25px 0 15px;
+    }
+
+    #t5 {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 15px 5px 25px;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin: 15px auto 25px;
+    }
+
+    .box {
+        min-height: 145px;
+    }
+
+    .box h2 {
+        font-size: 17px;
+    }
+
+    .box h3 {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 11px;
+        padding: 12px 8px;
+    }
+
 }
