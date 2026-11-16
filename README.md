@@ -32,10 +32,10 @@ A proposta consistiu na criação de um site para uma plataforma de cursos, expl
 
 ## 🎯 Contexto acadêmico
 
-Instituição | IFCE
-Curso | Técnico em Informática
-Disciplina | Desenvolvimento Web I
-Modalidade | Individual
+Instituição: IFCE
+Curso: Técnico em Informática
+Disciplina: Desenvolvimento Web I
+Modalidade: Individual
 
 ## 🌐 Acesse o projeto
 
