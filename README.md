@@ -10,7 +10,7 @@ A proposta consistiu na criação de um site para uma plataforma de cursos, expl
 
 ## 🖥️ Preview
 
-![Preview](imagens/preview.png)
+![Preview](imagens/preview.jpg)
 
 ## ✨ Funcionalidades e elementos
 
